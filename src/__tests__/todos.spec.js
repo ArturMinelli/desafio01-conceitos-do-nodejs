@@ -58,7 +58,7 @@ describe('Todos', () => {
       done: false
     });
     expect(validate(response.body.id)).toBe(true);
-    expect(response.body.created_at).toBeTruthy();
+    expect(response.body.createdAt).toBeTruthy();
   });
 
   it('should be able to update a todo', async () => {
@@ -96,7 +96,7 @@ describe('Todos', () => {
     const getAllTodosResponse = await request(app)
       .get((`/todos/`))
       .set('username', userResponse.body.username);
-    
+
     expect(
       getAllTodosResponse.body.find(
         (todo)=>todo.id === todoResponse.body.id
