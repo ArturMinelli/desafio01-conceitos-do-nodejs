@@ -58,7 +58,7 @@ app.post('/todos', checksExistsUserAccount, (request, response) => {
     title,
     deadline: new Date(deadline),
     done: false,
-    createdAt: new Date(),
+    created_at: new Date(),
   }
 
   user.todos.push(newTodo);
